@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: two-nginx-service
+spec:
+  selector:
+    app: two-nginx
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  - protocol: TCP
+    port: 50
+    targetPort: 50
+  type: ClusterIP
+
